@@ -1,0 +1,16 @@
+size(200, 200);
+int x, y, h, z, m;
+x = 100;
+y = 83;
+h = 90;
+z = 117;
+m = 120;
+
+fill(255, 255, 150);
+circle(x, x, 100);
+fill(0, 0, 0);
+circle(y, h, 10);
+fill(0, 0, 0);
+circle(z, h, 10);
+fill(0, 0, 0);
+circle(x, m, 20);
