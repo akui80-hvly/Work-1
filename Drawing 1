@@ -5,3 +5,28 @@ fill(0, 255, 0);
 circle(250, 150, 200);
 fill(0, 200, 0);
 rect(0, 430, 500, 75);
+
+
+void setup() {
+  size(600, 600);
+  background(0, 0, 0);
+}
+
+void draw() {
+  
+}
+
+float getSineY(int theta, float amplitude, int k) {
+  return((amplitude * sin(radians((float)theta))) + (float)k);
+}
+
+void drawSineCurve(int x, float amplitude, int k, int d) {
+  float y = getSineY(x, amplitude, k);
+  fill(255, 255, 255);
+  circle(x, y, d);
+}
+
+void plotCircle(int theta, int r, int cx, int cy, int d) {
+  fill(255, 255, 255);
+  circle(x, y, d);
+}
