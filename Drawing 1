@@ -1,49 +1,19 @@
-int squarex;
-int squarey;
-boolean play = true;
-int circlex;
-int circley;
-
 void setup() {
-  size(600, 400);
-  background(255, 255, 255);
+  size(1300, 500);
+  background(0);
+  drawface();
 }
 
-void draw() {
-  drawsquare(squarex, squarey, 20);
-  drawcircle(circlex, circley, 20);
+void drawface() {
+  stroke(255, 255, 255);
+  strokeWeight(3);
+  line(0, 50, 1300, 50);
+  for(int x = 0; x <= width; x+=50) {
+    line(x, 0, x, 50);
+    char number = (char)(x / 50);
+    text(number, x, 10);
+  }
 }
 
-void drawsquare(int x, int y, int size) {
-  fill(0);
-  rect(x, y, size, size);
-}
-
-void drawcircle (int x, int y, int d) {
-  circle(x, y, d);
-}
-
-void mouseDragged() {
-  line(squarex, squarey, circlex, circley);
-}
-
-void keyPressed() {
-  if (key == ' ') {
-    play = !play;
-  }
-  if (key == 'w' || keyCode == UP) {
-    squarey -= 5;
-  }
-  if (key == 'a' || keyCode == LEFT) {
-    squarex -= 5;
-  }
-  if (key == 's' || keyCode == DOWN) {
-    squarey += 5;
-  }
-  if (key == 'd' || keyCode == RIGHT) {
-    squarex += 5;
-  }
-  if (key == 'q') {
-    squarex = width / 2;
-    squarey = height / 2;
-}
+//void mousePressed() {
+ // if (mouseX <= 50
